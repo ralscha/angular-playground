@@ -1,0 +1,28 @@
+:host {
+    background-color: black;
+    border: none;
+    border-radius: 0.375em;
+    color: white;
+    display: block;
+    margin-block-start: 2em;
+    min-height: 2.75rem;
+    position: relative;
+    transition: opacity 0.25s ease-out;
+    width: 100%;
+
+    &:not([disabled]):hover {
+        cursor: pointer;
+    }
+
+    &:not([disabled]):focus {
+        background-color: #ff495d;
+        outline: solid 2px #00deb7;
+        outline-offset: 2px;
+    }
+
+    &[disabled] {
+        background: #aaa;
+        cursor: not-allowed;
+    }
+
+}

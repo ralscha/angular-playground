@@ -1,0 +1,35 @@
+.stars {
+    color: #aaa;
+    display: flex;
+    font-size: 2rem;
+    line-height: 1;
+
+    span {
+        cursor: pointer;
+    }
+
+    button {
+        background: transparent;
+        border: 0;
+        border-inline-start: solid 1px #aaa;
+        color: #6244b0;
+        cursor: pointer;
+        margin-inline-start: 0.75em;
+        outline: none;
+        padding: 0 0.75em;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.filled {
+    color: gold;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}

@@ -1,0 +1,14 @@
+<main>
+    <ng-content select="[slot-main]"></ng-content>
+</main>
+
+<aside [style.width.px]="currentWidth()">
+    <button (click)="reset()">Reset</button>
+
+    <ng-content select="[slot-sidebar]"></ng-content>
+
+    <div (cdkDragMoved)="onDragMoved($event)" cdkDrag class="resizer">
+        <span class="drag-icon">⠿</span>
+    </div>
+
+</aside>

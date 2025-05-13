@@ -1,0 +1,46 @@
+:host {
+    display: flex;
+    height: 100vh;
+}
+
+aside {
+    background: #dedede;
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+    order: 0;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    background: #fff;
+    order: 1;
+}
+
+.resizer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 100%;
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbb;
+    transition: background-color 0.2s ease;
+    z-index: 10;
+
+    &:hover {
+        background-color: #aaa;
+    }
+
+}
+
+.drag-icon {
+    font-size: 16px;
+    pointer-events: none;
+    user-select: none;
+    color: #333;
+}

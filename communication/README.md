@@ -1,0 +1,1 @@
+https://briantree.se/angular-component-communication-inputs-outputs-and-model-inputs/
