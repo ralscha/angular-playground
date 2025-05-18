@@ -1,0 +1,30 @@
+<article [class.invalid]="form.invalid && form.touched">
+    <header>
+        <h2>Sign Up</h2>
+        <em>Hello! Welcome to the family.</em>
+    </header>
+    <div [formGroup]="form">
+        <label>
+            <strong>Name</strong>
+            <input formControlName="name" type="text"/>
+        </label>
+        @let name = form.controls.name;
+        <div [class.visible]="name.invalid && name.touched" class="error">
+            Your name is required!
+        </div>
+        <label>
+            <strong>Email Address</strong>
+            <input formControlName="email" type="email"/>
+        </label>
+        @let email = form.controls.email;
+        <div [class.visible]="email.invalid && email.touched" class="error">
+            @if (email.hasError('required')) {
+                Your email is required!
+            } @else {
+                Please enter a valid email address!
+            }
+        </div>
+
+        <button>Continue</button>
+    </div>
+</article>

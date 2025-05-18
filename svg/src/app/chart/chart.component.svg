@@ -1,0 +1,17 @@
+<svg [attr.height]="20 * chartItems().length" width="420">
+    @for (item of chartItems(); track item; let index = $index) {
+        <g
+                (click)="activeIndex.set(index)"
+                [class.active]="activeIndex() === index">
+            <rect
+                    [attr.width]="item.count * 10"
+                    height="19"
+                    [attr.y]="index * 20"></rect>
+            <text
+                    [attr.x]="item.count * 10 + 5"
+                    [attr.y]="index * 20 + 15">
+                {{ item.label }}
+            </text>
+        </g>
+    }
+</svg>

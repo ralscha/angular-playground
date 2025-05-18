@@ -1,0 +1,6 @@
+<div [innerHTML]="content()"></div>
+<button [style.background]="warningColor()" (click)="setRandomColor()">Change Color</button>
+<button [style]="{
+    'background': warningColor(),
+    'color': 'white'
+  }">Change Color</button>

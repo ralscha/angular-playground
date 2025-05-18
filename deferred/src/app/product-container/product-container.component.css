@@ -1,0 +1,36 @@
+:host {
+    aspect-ratio: var(--aspectRatio);
+    background-color: #e5e5e9;
+    display: block;
+    height: auto;
+    margin-block-end: 1em;
+    max-width: 30em;
+    outline: 5px solid transparent;
+    overflow: hidden;
+    transition: scale 0.25s ease-in, filter 0.25s ease-in, outline-color 0.25s ease-in;
+    width: 45%;
+
+    --aspectRatio: 1 / 1.25;
+
+    &.start {
+        float: left;
+        margin-inline-end: 1.25em;
+    }
+
+    &.end {
+        float: right;
+        margin-inline-start: 1.25em;
+    }
+
+    &:has(app-product:not(.ng-animating)):hover {
+        filter: drop-shadow(0 0 10px rgba(black, 0.5));
+        outline-color: white;
+        scale: 1.05;
+    }
+
+}
+
+.placeholder {
+    height: 100%;
+    width: 100%;
+}

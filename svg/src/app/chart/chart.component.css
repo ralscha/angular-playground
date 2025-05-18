@@ -1,0 +1,33 @@
+svg {
+    border: solid 1px #ccc;
+    display: block;
+    padding: 2px 2px 1px;
+}
+
+g {
+    fill: #aaa;
+    transition: fill .3s ease;
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+
+    text {
+        fill: #555;
+        font-size: 85%;
+    }
+
+    &:not(.active):hover,
+    &:not(.active):focus {
+        &,
+        text {
+            fill: black;
+        }
+    }
+
+    &.active {
+        &,
+        text {
+            fill: green;
+        }
+    }
+
+}

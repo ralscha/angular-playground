@@ -1,0 +1,15 @@
+<h2>Shiba Inu</h2>
+<p>
+    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog
+    that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+</p>
+<button #btn (click)="buttonClicked()">
+    View Button
+</button>
+
+
+<button #btn2 (click)="button2Clicked()">
+    <ng-content></ng-content>
+</button>
+
+<div>{{ buttonText() }}</div>

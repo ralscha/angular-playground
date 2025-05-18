@@ -1,0 +1,5 @@
+:host {
+    display: grid;
+    place-items: center;
+    padding-block-start: 3em;
+}

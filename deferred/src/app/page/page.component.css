@@ -1,0 +1,46 @@
+:host {
+    background-color: rgba(white, 0.5);
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5em 1.5em;
+    position: relative;
+}
+
+header {
+    background: white;
+    border-bottom: solid 1px #ccc;
+    margin: 0 -1.5em 2em;
+    overflow: hidden;
+    padding: 1em 1.5em 0;
+}
+
+.menu {
+    background: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    right: 2em;
+    top: 1.5em;
+    width: auto;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    svg {
+        height: 22px;
+    }
+
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 0;
+
+    button + & {
+        margin-top: 1em;
+    }
+
+}

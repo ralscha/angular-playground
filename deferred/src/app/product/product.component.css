@@ -1,0 +1,44 @@
+:host {
+    cursor: pointer;
+    display: block;
+    transition: scale 0.25s ease-in, filter 0.25s ease-in;
+
+    &:hover {
+        scale: 1.125;
+
+        figcaption {
+            opacity: 1;
+        }
+    }
+
+}
+
+figure {
+    container-type: inline-size;
+    margin: 0;
+    position: relative;
+}
+
+figcaption {
+    background: rgba(black, 0.35);
+    color: white;
+    font-size: 13cqi;
+    font-weight: bold;
+    inset: 0;
+    opacity: 0;
+    place-content: center;
+    padding-inline: 12cqi;
+    position: absolute;
+    text-align: center;
+    transition: opacity 0.25s ease-in;
+    word-break: break-word;
+}
+
+.image {
+    background-image: var(--backgroundImage);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: var(--aspectRatio);
+}

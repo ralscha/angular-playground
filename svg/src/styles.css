@@ -1,0 +1,19 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 2em;
+}
+
+h2 {
+    font-size: 110%;
+    margin: 0;
+}
+
+h2:not(:first-child) {
+    margin-block-start: 1.75em;
+}
+
+em {
+    font-size: 80%;
+    display: block;
+    margin-block-end: 0.5em;
+}
