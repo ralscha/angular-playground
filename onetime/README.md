@@ -1,0 +1,1 @@
+https://briantree.se/angular-show-once-directive-using-local-storage/

@@ -1,0 +1,1 @@
+https://briantree.se/component-host-animations-in-angular-updated/

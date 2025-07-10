@@ -1,0 +1,10 @@
+<button
+  (click)="handleClick()"
+  [disabled]="disabled() || cooldownSeconds() > 0">
+  @if (cooldownSeconds() > 0) {
+    {{ `Retry in ${cooldownSeconds()}s` }}
+  } @else {
+    {{ label() }}
+  }
+</button>
+

@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-button {
+  border: none;
+  background: transparent;
+  display: block;
+  padding: 0;
+  cursor: pointer;
+}
+
+.avatar-button img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 220px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 0.75rem;
+  z-index: 1000;
+}
+
+.dropdown-header {
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-header strong {
+  color: #333;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-header small {
+  color: #666;
+  font-size: 12px;
+}
+
+.dropdown a,
+.dropdown button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  color: #007acc;
+}
+
+.dropdown hr {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px solid #eee;
+}

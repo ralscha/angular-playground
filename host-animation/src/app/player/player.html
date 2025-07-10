@@ -1,0 +1,37 @@
+@let playerVar = player();
+<img [alt]="playerVar.imageName" height="760" src="https://placehold.co/1040x760" width="1040"/>
+<h2>{{ playerVar.name }}</h2>
+<dl>
+  <div>
+    <dt>
+      GP
+    </dt>
+    <dd>
+      {{ playerVar.games | number }}
+    </dd>
+  </div>
+  <div>
+    <dt>
+      PTS
+    </dt>
+    <dd>
+      {{ playerVar.points | number }}
+    </dd>
+  </div>
+  <div>
+    <dt>
+      FG%
+    </dt>
+    <dd>
+      {{ playerVar.fieldGoalPercentage | percent:'.1' }}
+    </dd>
+  </div>
+  <div>
+    <dt>
+      3P%
+    </dt>
+    <dd>
+      {{ playerVar.threePointPercentage | percent:'.1' }}
+    </dd>
+  </div>
+</dl>

@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  font-family: system-ui, sans-serif;
+  padding: 2rem;
+  background: #f7f7f7;
+  color: #333;
+}
+
+.app-header {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 1.8rem;
+    color: #2e3a59;
+  }
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}

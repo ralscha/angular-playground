@@ -1,0 +1,23 @@
+@for (player of players; track player.name) {
+  <app-player [player]="player"></app-player>
+}
+@if (players.length > 0) {
+  <button
+    (click)="removePlayer()"
+    title="Remove Player"
+    class="remove">
+        <span class="cdk-visually-hidden">
+            Remove Player
+        </span>
+  </button>
+}
+@if (players.length < totalCount) {
+  <button
+    (click)="addPlayer()"
+    title="Add Player"
+    class="add">
+        <span class="cdk-visually-hidden">
+            Add Player
+        </span>
+  </button>
+}

@@ -1,0 +1,18 @@
+<button (click)="this.isOpen.set(true)" class="avatar-button">
+  <img [ngSrc]="'/assets/avatar.jpg'" alt="Avatar" height="1024" width="1024" />
+</button>
+
+@if (isOpen()) {
+  <div  (clickOutside)="isOpen.set(false)" class="dropdown">
+    <div class="dropdown-header">
+      <strong>John Doe</strong>
+      <small>{{ 'john@example.com' }}</small>
+    </div>
+    <hr />
+    <a href="#">Account Settings</a>
+    <a href="#">Billing</a>
+    <a href="#">Notifications</a>
+    <hr />
+    <button (click)="logout()">Logout</button>
+  </div>
+}

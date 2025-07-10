@@ -1,0 +1,44 @@
+@if (submitted()) {
+  <div class="submission-message">
+    <h2>✅ Thank you!</h2>
+    <p>Your information has been submitted successfully.</p>
+    <button (click)="resetForm()">Start Over</button>
+  </div>
+} @else {
+  <div stepTracker [stepLabels]="steps()" #wizard="stepper" class="stepper">
+    <div class="step-header">
+      <p class="step-count">
+        Step {{ wizard.stepIndex() + 1 }} of {{ wizard.totalSteps() }}
+      </p>
+      <h2 class="step-label">
+        {{ wizard.currentLabel() }}
+      </h2>
+    </div>
+    <div class="step-content">
+      @if (wizard.stepIndex() === 0) {
+        <section>
+          <h3>Personal Info</h3>
+          <p>Fill out your name, email, and contact information.</p>
+        </section>
+      } @else if (wizard.stepIndex() === 1) {
+        <section>
+          <h3>Work Details</h3>
+          <p>Enter your job title, company, and experience.</p>
+        </section>
+      } @else if (wizard.stepIndex() === 2) {
+        <section>
+          <h3>Review & Submit</h3>
+          <p>Please review your information before submitting.</p>
+        </section>
+      }
+    </div>
+  </div>
+  <div class="nav-buttons">
+    <button (click)="wizard.prev()" [disabled]="wizard.isFirstStep()">Back</button>
+    @if (!wizard.isLastStep()) {
+      <button (click)="wizard.next()">Next</button>
+    } @else {
+      <button (click)="submit()">Submit</button>
+    }
+  </div>
+}

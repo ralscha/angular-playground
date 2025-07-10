@@ -1,0 +1,23 @@
+<h2>Send us a message</h2>
+
+<label for="message">Message</label>
+<textarea
+  [(ngModel)]="message"
+  id="message"
+  name="message"
+  placeholder="Type your message here..."
+  required
+  rows="4">
+</textarea>
+
+<app-cooldown-button
+  (click)="onSubmit($event)"
+  [disabled]="!message()"
+  [duration]="8"
+  label="Send Message"
+>
+</app-cooldown-button>
+
+@if (showSuccess()) {
+  <p>✅ Message sent successfully!</p>
+}

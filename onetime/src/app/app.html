@@ -1,0 +1,14 @@
+<header class="app-header">
+  <h1>My Dashboard</h1>
+</header>
+<main class="app-content">
+  <ng-template #showOnce="showOnce" showOnce="bannerDismissed">
+    <app-welcome-banner (dismiss)="showOnce.clear()"></app-welcome-banner>
+  </ng-template>
+  <section class="dashboard-grid">
+    <div class="card">📊 Analytics Overview</div>
+    <div class="card">📦 Recent Orders</div>
+    <div class="card">🧑‍💻 Developer Logs</div>
+    <div class="card">🔧 System Settings</div>
+  </section>
+</main>
