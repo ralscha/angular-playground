@@ -1,0 +1,1 @@
+https://briantree.se/how-to-build-a-flexible-reusable-view-mode-toggle-component-in-angular/

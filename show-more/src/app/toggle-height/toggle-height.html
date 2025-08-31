@@ -1,0 +1,12 @@
+<article #container>
+  <ng-content></ng-content>
+</article>
+<footer>
+  <button (click)="toggle()">
+    @if (isExpanded) {
+      Less
+    } @else {
+      More
+    }
+  </button>
+</footer>

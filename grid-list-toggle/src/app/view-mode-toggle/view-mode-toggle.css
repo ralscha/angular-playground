@@ -1,0 +1,49 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  align-self: center;
+  font-size: 1em;
+  margin: 0 auto 0 1em;
+}
+
+button {
+  all: unset;
+  padding: 0.5rem 1rem 0.3125em;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid #ccc;
+  }
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+  width: 25px;
+}

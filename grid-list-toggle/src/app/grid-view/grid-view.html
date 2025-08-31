@@ -1,0 +1,11 @@
+<article class="grid-card">
+  <img [src]="product().imageUrl" [alt]="product().name" />
+  <div class="info">
+    <h3>{{ product().name }}</h3>
+    <p class="description">{{ product().description }}</p>
+    <footer>
+      <span class="price">${{ product().price.toFixed(2) }}</span>
+      <button>Add to Cart</button>
+    </footer>
+  </div>
+</article>

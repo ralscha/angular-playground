@@ -1,0 +1,22 @@
+    <app-view-mode-toggle [(mode)]="viewMode">
+      Products
+      <div grid>
+        @for (product of products; track product.id) {
+          <app-grid-view [product]="product" />
+        }
+      </div>
+      <div list>
+        @for (product of products; track product.id) {
+          <app-list-view [product]="product" />
+        }
+      </div>
+    </app-view-mode-toggle>
+
+    <!--
+    @for (product of products; track product.id) {
+      <app-product-item
+        [product]="product"
+        [class.grid]="viewMode() === 'grid'"
+        [class.list]="viewMode() === 'list'"/>
+    }
+    -->
