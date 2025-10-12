@@ -1,0 +1,26 @@
+<header class="header">
+  <h1>Today</h1>
+  <p class="subtle">
+    Tasks: {{ todos().length }} • Remaining: {{ remainingCount() }}
+  </p>
+</header>
+<ul
+  cdkDropList
+  (cdkDropListDropped)="drop($event)"
+  class="todo-list">
+  @for (todo of todos(); track todo.id; let i = $index) {
+    <li cdkDrag class="todo-item">
+      <button
+        type="button"
+        class="checkbox"
+        [attr.aria-label]="`Mark ${ todo.title } as ${ todo.done ? 'incomplete' : 'done' }`"
+        (click)="toggle(todo)">
+        {{ todo.done ? '☑' : '☐' }}
+      </button>
+      <span class="title" [class.done]="todo.done">
+        {{ i + 1 }}. {{ todo.title }}
+      </span>
+      <span class="grip" aria-hidden="true">⋮⋮</span>
+    </li>
+  }
+</ul>

@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  margin-inline: auto;
+  max-width: 20rem;
+}
+
+.list {
+  border: 1px solid #606060;
+  border-radius: 8px;
+  overflow: hidden;
+
+  > div {
+    padding: 0.6rem 0.9rem;
+    outline: none;
+
+    &.active {
+      background: rgba(255,255,255,0.1);
+    }
+    
+    &:focus {
+      outline: 2px solid;
+      outline-offset: -2px;
+    }
+  }
+}

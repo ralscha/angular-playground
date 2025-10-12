@@ -1,0 +1,18 @@
+<h3>Active Users</h3>
+<div 
+  class="list" 
+  role="listbox" 
+  (click)="handleClick($event)" 
+  (keydown)="handleKeydown($event)">
+  @for (person of people; track person; let i = $index) {
+    @let isTabbable = active() === -1 && i === 0 || i === active();
+    <div
+      role="option"
+      appOption
+      [label]="person"
+      [attr.tabindex]="isTabbable ? 0 : -1"
+      (focus)="handleFocus()">
+      {{ person }}
+    </div>
+  }
+</div>
