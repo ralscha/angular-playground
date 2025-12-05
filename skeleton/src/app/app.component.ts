@@ -7,9 +7,9 @@ import {ProfileCardComponent} from "./profile-card/profile-card.component";
     ProfileCardComponent
   ],
   template: `
-    <app-profile-card></app-profile-card>
-    <app-profile-card></app-profile-card>
-    <app-profile-card></app-profile-card>
+    <app-profile-card />
+    <app-profile-card />
+    <app-profile-card />
   `,
   styles: [],
 })

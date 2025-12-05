@@ -3,7 +3,7 @@ import {Directive, input} from '@angular/core';
 @Directive({
     selector: '[appDisableOnLoading]',
     host: {
-        '[disabled]': 'this.loading()'
+        '[attr.disabled]': 'this.loading() ? true : null'
     }
 })
 export class DisableOnLoadingDirective {

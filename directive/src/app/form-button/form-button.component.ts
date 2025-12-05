@@ -7,7 +7,7 @@ import {DisableOnLoadingDirective} from "../disable-on-loading.directive";
     selector: '[appFormButton]',
     imports: [],
     template: `
-        <ng-content></ng-content>`,
+        <ng-content />`,
     styleUrl: './form-button.component.css',
     hostDirectives: [
         {directive: AutoFocusDirective},

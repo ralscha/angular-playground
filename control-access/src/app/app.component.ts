@@ -4,7 +4,7 @@ import {ProfileFormComponent} from "./profile-form/profile-form.component";
 @Component({
     selector: 'app-root',
     template: `
-        <app-profile-form></app-profile-form>
+        <app-profile-form />
     `,
     imports: [ProfileFormComponent]
 })

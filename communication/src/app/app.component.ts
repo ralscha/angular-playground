@@ -4,7 +4,7 @@ import {UsernameFieldComponent} from "./username-field/username-field.component"
 @Component({
   selector: 'app-root',
   template: `
-    <app-username-field [(username)]="username"></app-username-field>
+    <app-username-field [(username)]="username" />
     <p>Hello, {{ username() }}!</p>
   `,
   imports: [UsernameFieldComponent],
