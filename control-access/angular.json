@@ -45,11 +45,8 @@
             "browser": "src/main.ts",
             "polyfills": [],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": [],
+            "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {

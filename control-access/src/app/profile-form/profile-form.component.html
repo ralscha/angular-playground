@@ -1,9 +1,9 @@
 <form (ngSubmit)="submit()" [formGroup]="form">
-    <label>Name</label>
-    <input formControlName="name">
-    <label>Rating</label>
-    <app-rating-stars [control]="form.controls.rating" />
-    <button [disabled]="form.invalid" type="submit">Submit</button>
+  <label>Name</label>
+  <input formControlName="name" />
+  <label>Rating</label>
+  <app-rating-stars [control]="form.controls.rating" />
+  <button [disabled]="form.invalid" type="submit">Submit</button>
 </form>
 
 <h3>Form Value Preview:</h3>

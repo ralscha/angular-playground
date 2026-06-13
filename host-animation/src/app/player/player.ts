@@ -1,21 +1,20 @@
-import {Component, input} from '@angular/core';
-import {DecimalPipe, PercentPipe} from '@angular/common';
-import {enterLeaveAnimation} from '../animation';
-import {Player} from '../players';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+import { DecimalPipe, PercentPipe } from '@angular/common';
+import { enterLeaveAnimation } from '../animation';
+import { Player } from '../players';
 
 @Component({
   selector: 'app-player',
   templateUrl: './player.html',
   styleUrl: './player.css',
   imports: [DecimalPipe, PercentPipe],
-  animations: [
-    enterLeaveAnimation
-  ],
+  animations: [enterLeaveAnimation],
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: {
     '[@enterLeaveAnimation]': '',
     '(@enterLeaveAnimation.start)': 'start()',
-    '(@enterLeaveAnimation.done)': 'done()'
-  }
+    '(@enterLeaveAnimation.done)': 'done()',
+  },
 })
 export class PlayerComponent {
   readonly player = input.required<Player>();

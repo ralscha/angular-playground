@@ -2,22 +2,12 @@
   <app-player [player]="player" />
 }
 @if (players.length > 0) {
-  <button
-    (click)="removePlayer()"
-    title="Remove Player"
-    class="remove">
-        <span class="cdk-visually-hidden">
-            Remove Player
-        </span>
+  <button (click)="removePlayer()" title="Remove Player" class="remove">
+    <span class="cdk-visually-hidden"> Remove Player </span>
   </button>
 }
 @if (players.length < totalCount) {
-  <button
-    (click)="addPlayer()"
-    title="Add Player"
-    class="add">
-        <span class="cdk-visually-hidden">
-            Add Player
-        </span>
+  <button (click)="addPlayer()" title="Add Player" class="add">
+    <span class="cdk-visually-hidden"> Add Player </span>
   </button>
 }

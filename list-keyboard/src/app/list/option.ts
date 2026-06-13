@@ -3,10 +3,10 @@ import { Directive, ElementRef, inject, input, signal } from '@angular/core';
 
 @Directive({
   selector: '[appOption]',
-  host: { 
+  host: {
     '[class.active]': 'active()',
     '[attr.aria-selected]': 'active() ? true : null',
-  }
+  },
 })
 // export class OptionDirective {
 export class OptionDirective implements ListKeyManagerOption, Highlightable {
@@ -14,14 +14,14 @@ export class OptionDirective implements ListKeyManagerOption, Highlightable {
   readonly label = input('');
   protected readonly active = signal(false);
 
-  focus() { 
-    this.host.nativeElement.focus(); 
+  focus() {
+    this.host.nativeElement.focus();
   }
 
   // setActive(on: boolean) {
   //   this.active.set(on);
   // }
-  
+
   getLabel() {
     return this.label();
   }

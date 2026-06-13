@@ -1,11 +1,11 @@
-import {Directive, effect, inject, input, TemplateRef, ViewContainerRef} from '@angular/core';
+import { Directive, effect, inject, input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[showOnce]',
-  exportAs: 'showOnce'
+  exportAs: 'showOnce',
 })
 export class ShowOnce {
-  key = input('', {alias: 'showOnce'});
+  key = input('', { alias: 'showOnce' });
   readonly #templateRef = inject(TemplateRef<unknown>);
   readonly #viewContainerRef = inject(ViewContainerRef);
 
@@ -23,5 +23,4 @@ export class ShowOnce {
     localStorage.setItem(this.key(), 'true');
     this.#viewContainerRef.clear();
   }
-
 }

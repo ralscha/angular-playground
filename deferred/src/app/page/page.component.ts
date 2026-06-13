@@ -1,13 +1,14 @@
-import {Component} from '@angular/core';
-import {ProductContainerComponent} from "../product-container/product-container.component";
-import {Products, products} from "../products";
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { ProductContainerComponent } from '../product-container/product-container.component';
+import { Products, products } from '../products';
 
 @Component({
-    selector: 'app-page',
-    imports: [ProductContainerComponent],
-    templateUrl: './page.component.html',
-    styleUrl: './page.component.css'
+  selector: 'app-page',
+  imports: [ProductContainerComponent],
+  templateUrl: './page.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './page.component.css',
 })
 export class PageComponent {
-    protected products: Products[] = products;
+  protected products: Products[] = products;
 }

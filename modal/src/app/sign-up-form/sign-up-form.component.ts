@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, inject} from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {DialogRef} from "@angular/cdk/dialog";
+import { DialogRef } from '@angular/cdk/dialog';
 
 interface SignUpForm {
   name: FormControl<string>;
@@ -13,12 +13,8 @@ interface SignUpForm {
   selector: 'app-sign-up-form',
   templateUrl: './sign-up-form.component.html',
   styleUrl: './sign-up-form.component.css',
-  imports: [
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignUpFormComponent {
   readonly #dialogRef = inject(DialogRef, { optional: true });
@@ -26,15 +22,12 @@ export class SignUpFormComponent {
   protected signUpForm = new FormGroup<SignUpForm>({
     name: new FormControl<string>('', {
       nonNullable: true,
-      validators: Validators.required
+      validators: Validators.required,
     }),
     email: new FormControl<string>('', {
       nonNullable: true,
-      validators: [
-        Validators.required,
-        Validators.email
-      ]
-    })
+      validators: [Validators.required, Validators.email],
+    }),
   });
 
   protected closeModal() {

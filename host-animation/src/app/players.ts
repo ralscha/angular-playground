@@ -14,7 +14,7 @@ export const players = [
     points: 38652,
     fieldGoalPercentage: 0.505,
     threePointPercentage: 0.345,
-    imageName: 'lebron-james'
+    imageName: 'lebron-james',
   },
   {
     name: 'Kareem Abdul-Jabbar',
@@ -22,7 +22,7 @@ export const players = [
     points: 38387,
     fieldGoalPercentage: 0.559,
     threePointPercentage: 0.056,
-    imageName: 'kareem-abdul-jabbar'
+    imageName: 'kareem-abdul-jabbar',
   },
   {
     name: 'Karl Malone',
@@ -30,7 +30,7 @@ export const players = [
     points: 36928,
     fieldGoalPercentage: 0.516,
     threePointPercentage: 0.274,
-    imageName: 'karl-malone'
+    imageName: 'karl-malone',
   },
   {
     name: 'Kobe Bryant',
@@ -38,7 +38,7 @@ export const players = [
     points: 33643,
     fieldGoalPercentage: 0.447,
     threePointPercentage: 0.329,
-    imageName: 'kobe-bryant'
+    imageName: 'kobe-bryant',
   },
   {
     name: 'Michael Jordan',
@@ -46,7 +46,7 @@ export const players = [
     points: 32292,
     fieldGoalPercentage: 0.497,
     threePointPercentage: 0.327,
-    imageName: 'michael-jordan'
+    imageName: 'michael-jordan',
   },
   {
     name: 'Dirk Nowitzki',
@@ -54,7 +54,7 @@ export const players = [
     points: 31560,
     fieldGoalPercentage: 0.471,
     threePointPercentage: 0.38,
-    imageName: 'dirk-nowitzki'
+    imageName: 'dirk-nowitzki',
   },
   {
     name: 'Wilt Chamberlain',
@@ -62,15 +62,15 @@ export const players = [
     points: 31419,
     fieldGoalPercentage: 0.54,
     threePointPercentage: 0,
-    imageName: 'wilt-chamberlain'
+    imageName: 'wilt-chamberlain',
   },
   {
-    name: 'Shaquille O\'Neal',
+    name: "Shaquille O'Neal",
     games: 1207,
     points: 28596,
     fieldGoalPercentage: 0.582,
     threePointPercentage: 0.045,
-    imageName: 'shaquille-oneal'
+    imageName: 'shaquille-oneal',
   },
   {
     name: 'Carmelo Anthony',
@@ -78,15 +78,15 @@ export const players = [
     points: 28289,
     fieldGoalPercentage: 0.447,
     threePointPercentage: 0.355,
-    imageName: 'carmelo-anthony'
+    imageName: 'carmelo-anthony',
   },
   {
     name: 'Moses Malone',
     games: 1329,
     points: 27409,
     fieldGoalPercentage: 0.491,
-    threePointPercentage: 0.10,
-    imageName: 'moses-malone'
+    threePointPercentage: 0.1,
+    imageName: 'moses-malone',
   },
   {
     name: 'Elvin Hayes',
@@ -94,6 +94,6 @@ export const players = [
     points: 27313,
     fieldGoalPercentage: 0.452,
     threePointPercentage: 0.147,
-    imageName: 'elvin-hayes'
-  }
-]
+    imageName: 'elvin-hayes',
+  },
+];

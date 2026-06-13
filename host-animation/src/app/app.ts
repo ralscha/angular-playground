@@ -1,14 +1,13 @@
-import {Component} from '@angular/core';
-import {players} from './players';
-import {PlayerComponent} from './player/player';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { players } from './players';
+import { PlayerComponent } from './player/player';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    PlayerComponent
-  ],
+  imports: [PlayerComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './app.css',
 })
 export class App {
   protected players = [players[0]];
@@ -22,5 +21,4 @@ export class App {
   removePlayer() {
     this.players.splice(-1);
   }
-
 }

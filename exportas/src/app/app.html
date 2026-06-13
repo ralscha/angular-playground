@@ -7,9 +7,7 @@
 } @else {
   <div stepTracker [stepLabels]="steps()" #wizard="stepper" class="stepper">
     <div class="step-header">
-      <p class="step-count">
-        Step {{ wizard.stepIndex() + 1 }} of {{ wizard.totalSteps() }}
-      </p>
+      <p class="step-count">Step {{ wizard.stepIndex() + 1 }} of {{ wizard.totalSteps() }}</p>
       <h2 class="step-label">
         {{ wizard.currentLabel() }}
       </h2>

@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, signal, ChangeDetectionStrategy } from '@angular/core';
 import { CdkDropList, CdkDrag, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 type Todo = { id: string; title: string; done?: boolean };
@@ -7,6 +7,7 @@ type Todo = { id: string; title: string; done?: boolean };
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CdkDropList, CdkDrag],
 })
 export class App {
@@ -18,19 +19,18 @@ export class App {
   ]);
 
   protected drop(event: CdkDragDrop<Todo[]>) {
-    this.todos.update(list => {
+    this.todos.update((list) => {
       const next = [...list];
       moveItemInArray(next, event.previousIndex, event.currentIndex);
       return next;
     });
   }
 
-  protected remainingCount = computed(() =>
-    this.todos().filter(t => !t.done).length);
+  protected remainingCount = computed(() => this.todos().filter((t) => !t.done).length);
 
   protected toggle(t: Todo) {
-    this.todos.update(list =>
-      list.map(item => (item.id === t.id ? { ...item, done: !item.done } : item))
+    this.todos.update((list) =>
+      list.map((item) => (item.id === t.id ? { ...item, done: !item.done } : item)),
     );
   }
 }

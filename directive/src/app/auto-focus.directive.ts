@@ -1,12 +1,12 @@
-import {afterNextRender, Directive, ElementRef} from '@angular/core';
+import { afterNextRender, Directive, ElementRef } from '@angular/core';
 
 @Directive({
-    selector: '[appAutoFocus]',
+  selector: '[appAutoFocus]',
 })
 export class AutoFocusDirective {
-    constructor(private elementRef: ElementRef<HTMLElement>) {
-        afterNextRender(() => {
-            this.elementRef.nativeElement.focus();
-        });
-    }
+  constructor(private elementRef: ElementRef<HTMLElement>) {
+    afterNextRender(() => {
+      this.elementRef.nativeElement.focus();
+    });
+  }
 }

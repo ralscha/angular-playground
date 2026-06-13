@@ -1,13 +1,22 @@
-import {afterNextRender, Component, ElementRef, inject, Renderer2, signal} from '@angular/core';
+import {
+  afterNextRender,
+  Component,
+  ElementRef,
+  inject,
+  Renderer2,
+  signal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  changeDetection: ChangeDetectionStrategy.Eager,
   host: {
-    '[style.background]': 'color()'
-  }
+    '[style.background]': 'color()',
+  },
   /*
   styles: `
     :host {

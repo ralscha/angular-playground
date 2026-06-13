@@ -16,19 +16,21 @@ body {
   place-content: center;
   height: 100%;
 
-  @include mat.theme((
-          color: (
-                  theme-type: light,
-                  primary: mat.$azure-palette,
-                  tertiary: mat.$blue-palette,
-          ),
-          density: 0,
-  ));
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      density: 0,
+    )
+  );
 }
 
 nav {
   background-color: #6244b0;
-  padding-block: 1em;;
+  padding-block: 1em;
 
   ul {
     margin: 0;
@@ -91,4 +93,3 @@ html.cdk-global-scrollblock {
   white-space: nowrap;
   width: 1px;
 }
-

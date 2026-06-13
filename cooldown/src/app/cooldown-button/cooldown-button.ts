@@ -1,10 +1,11 @@
-import {Component, input, OnDestroy, signal} from '@angular/core';
+import { Component, input, OnDestroy, signal, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-cooldown-button',
   imports: [],
   templateUrl: './cooldown-button.html',
-  styleUrl: './cooldown-button.css'
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './cooldown-button.css',
 })
 export class CooldownButton implements OnDestroy {
   readonly disabled = input(false);

@@ -7,14 +7,15 @@
   name="message"
   placeholder="Type your message here..."
   required
-  rows="4">
-</textarea>
+  rows="4"
+></textarea>
 
-<app-cooldown-button (click)="onSubmit($event)"
+<app-cooldown-button
+  (click)="onSubmit($event)"
   [disabled]="!message()"
   [duration]="8"
   label="Send Message"
- />
+/>
 
 @if (showSuccess()) {
   <p>✅ Message sent successfully!</p>

@@ -40,11 +40,8 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-            ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "assets": [],
+            "styles": ["src/styles.css"]
           },
           "configurations": {
             "production": {

@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
-import {UsernameFieldComponent} from "./username-field/username-field.component";
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { UsernameFieldComponent } from './username-field/username-field.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import {UsernameFieldComponent} from "./username-field/username-field.component"
     <p>Hello, {{ username() }}!</p>
   `,
   imports: [UsernameFieldComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   protected readonly username = signal('Brian');

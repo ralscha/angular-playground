@@ -1,18 +1,12 @@
 <nav>
   <h2><ng-content /></h2>
-  <button 
-    (click)="set('grid')" 
-    [class.active]="mode() === 'grid'"
-    title="Grid View">
+  <button (click)="set('grid')" [class.active]="mode() === 'grid'" title="Grid View">
     <svg viewBox="0 0 16 16">
       <use href="#gridViewIcon" />
     </svg>
     <span class="visually-hidden">Grid View</span>
   </button>
-  <button 
-    (click)="set('list')" 
-    [class.active]="mode() === 'list'"
-    title="List View">
+  <button (click)="set('list')" [class.active]="mode() === 'list'" title="List View">
     <svg viewBox="0 0 16 16">
       <use href="#listViewIcon" />
     </svg>

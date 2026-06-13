@@ -1,4 +1,11 @@
-import { Component, computed, Signal, signal, viewChildren } from '@angular/core';
+import {
+  Component,
+  computed,
+  Signal,
+  signal,
+  viewChildren,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { OptionDirective } from './option';
 import { ListKeyManager } from '@angular/cdk/a11y';
 import { PEOPLE } from './people';
@@ -7,19 +14,20 @@ import { PEOPLE } from './people';
   selector: 'app-list',
   templateUrl: './list.html',
   styleUrl: './list.css',
-  imports: [ OptionDirective ]
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [OptionDirective],
 })
 export default class List {
   protected people = PEOPLE;
   protected active = signal(-1);
   protected options: Signal<readonly OptionDirective[]> = viewChildren(OptionDirective);
-  private optionElements = computed(() => this.options().map(o => o.host.nativeElement));
+  private optionElements = computed(() => this.options().map((o) => o.host.nativeElement));
 
   private keyManager?: ListKeyManager<OptionDirective>;
 
   protected handleClick(event: Event) {
     const i = this.optionElements().indexOf(event.target as HTMLElement);
-    if (i < 0) { 
+    if (i < 0) {
       return;
     }
     this.applyListState(i);
@@ -27,7 +35,7 @@ export default class List {
     this.setupKeyManager();
     this.keyManager?.setActiveItem(i);
   }
-  
+
   protected handleKeydown(event: KeyboardEvent) {
     this.setupKeyManager();
     if (this.keyManager) {
@@ -45,7 +53,7 @@ export default class List {
     if (!this.keyManager) {
       // this.keyManager = new ListKeyManager(this.options());
       this.keyManager = new ListKeyManager(this.options()).withWrap().withHomeAndEnd();
-      
+
       this.keyManager.setActiveItem(0);
       this.applyListState(0);
     }
@@ -54,14 +62,13 @@ export default class List {
   private applyListState(index: number) {
     this.active.set(index);
     const nodes = this.optionElements();
-    nodes.forEach((el, i) => el.tabIndex = i === index ? 0 : -1);
+    nodes.forEach((el, i) => (el.tabIndex = i === index ? 0 : -1));
     nodes[index].focus();
 
     // this.options().forEach((o, idx) => o.setActive(idx === this.active()));
 
     this.options().forEach((o, idx) =>
-      idx === this.active() ? 
-        o.setActiveStyles() : 
-        o.setInactiveStyles());
+      idx === this.active() ? o.setActiveStyles() : o.setInactiveStyles(),
+    );
   }
 }

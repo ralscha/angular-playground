@@ -16,14 +16,10 @@
             "outputPath": "dist/toast",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-            ],
+            "polyfills": [],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": [],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {

@@ -1,14 +1,12 @@
 article {
   overflow: hidden;
   height: var(--collapsedHeight);
-  mask-image: linear-gradient(
-    black,
-    black calc(100% - 1.5em),
-    rgba(black, 0) 100%);
+  mask-image: linear-gradient(black, black calc(100% - 1.5em), rgba(black, 0) 100%);
   mask-size: 100% calc(100% + 1.5em);
   mask-position: bottom;
-  transition: height 0.25s ease,
-  padding-block-end 0.25s ease;
+  transition:
+    height 0.25s ease,
+    padding-block-end 0.25s ease;
 }
 
 :host(.expanded) article {

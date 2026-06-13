@@ -1,10 +1,10 @@
-import {ChangeDetectionStrategy, Component, inject, signal} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSnackBar} from '@angular/material/snack-bar';
-import {HelpPanelComponent} from './help-panel/help-panel.component';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { HelpPanelComponent } from './help-panel/help-panel.component';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,7 +13,7 @@ import {HelpPanelComponent} from './help-panel/help-panel.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    HelpPanelComponent
+    HelpPanelComponent,
   ],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.css',
@@ -23,7 +23,7 @@ export class ContactFormComponent {
   protected contactForm = new FormGroup({
     name: new FormControl<string>('', Validators.required),
     email: new FormControl<string>('', [Validators.required, Validators.email]),
-    message: new FormControl<string>('', Validators.required)
+    message: new FormControl<string>('', Validators.required),
   });
 
   protected showHelpPanel = signal(false);

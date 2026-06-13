@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, model} from '@angular/core';
+import { ChangeDetectionStrategy, Component, model } from '@angular/core';
 
 export type ListMode = 'grid' | 'list';
 
@@ -6,7 +6,7 @@ export type ListMode = 'grid' | 'list';
   selector: 'app-view-mode-toggle',
   templateUrl: './view-mode-toggle.html',
   styleUrl: './view-mode-toggle.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ViewModeToggle {
   readonly mode = model<ListMode>('list');
@@ -14,5 +14,4 @@ export class ViewModeToggle {
   protected set(mode: ListMode) {
     this.mode.set(mode);
   }
-
 }

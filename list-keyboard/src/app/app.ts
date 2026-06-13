@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import List from './list/list';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <app-list />
-  `,
-  imports: [ List ]
+  template: ` <app-list /> `,
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [List],
 })
-export class App {
-}
+export class App {}

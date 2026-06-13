@@ -14,16 +14,17 @@ body {
   overflow: hidden;
   height: 100%;
 
-  @include mat.theme((
-    color: (
-      theme-type: light,
-      primary: mat.$azure-palette,
-      tertiary: mat.$blue-palette,
-    ),
-    density: 0,
-  ));
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      density: 0,
+    )
+  );
 }
-
 
 .visually-hidden {
   clip: rect(0 0 0 0);

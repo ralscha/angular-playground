@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, ElementRef, input, viewChild} from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, input, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-toggle-height',
@@ -10,7 +10,7 @@ import {ChangeDetectionStrategy, Component, ElementRef, input, viewChild} from '
     '[class.expanded]': 'isExpanded',
     '[style.--collapsedHeight]': 'collapsedHeight()',
     '[style.--expandedHeight]': 'expandedHeight',
-  }
+  },
 })
 export class ToggleHeight {
   collapsedHeight = input('50px');
@@ -20,7 +20,8 @@ export class ToggleHeight {
 
   protected toggle() {
     this.isExpanded = !this.isExpanded;
-    this.expandedHeight = this.isExpanded ?
-      `${this.container().nativeElement.scrollHeight}px` : null;
+    this.expandedHeight = this.isExpanded
+      ? `${this.container().nativeElement.scrollHeight}px`
+      : null;
   }
 }

@@ -1,14 +1,14 @@
-import {ChangeDetectionStrategy, Component, input, model, output} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, model, output } from '@angular/core';
 
 @Component({
   selector: 'app-username-field',
   imports: [],
   templateUrl: './username-field.component.html',
   styleUrl: './username-field.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UsernameFieldComponent {
-  readonly username = model("");
+  readonly username = model('');
 
   onInput(event: Event) {
     const value = (event.target as HTMLInputElement).value;

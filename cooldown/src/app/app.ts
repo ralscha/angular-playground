@@ -1,15 +1,13 @@
-import {Component, signal} from '@angular/core';
-import {CooldownButton} from './cooldown-button/cooldown-button';
-import {FormsModule} from '@angular/forms';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
+import { CooldownButton } from './cooldown-button/cooldown-button';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    CooldownButton,
-    FormsModule
-  ],
+  imports: [CooldownButton, FormsModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './app.css',
 })
 export class App {
   protected readonly message = signal('');
@@ -23,7 +21,7 @@ export class App {
 
     this.showSuccess.set(true);
     setTimeout(() => {
-      this.showSuccess.set(false)
+      this.showSuccess.set(false);
       this.message.set('');
     }, 8000);
   }
